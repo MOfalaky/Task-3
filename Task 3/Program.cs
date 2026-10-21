@@ -62,7 +62,7 @@
 
     class School : Student
     {
-        // لازم نعمل new للـ Lists هنا عشان ما تبقاش null
+        
         public List<Student> Students { get; set; } = new List<Student>();
         public new List<Course> Courses { get; set; } = new List<Course>();
         public List<Instructor> Instructors { get; set; } = new List<Instructor>();
@@ -172,7 +172,7 @@
     {
         static void Main(string[] args)
         {
-            // School واحد بس طول البرنامج (مش كل مرة new)
+            
             School school = new School();
 
             int choice;
@@ -195,7 +195,7 @@
                 {
                     case 1:
                         {
-                            // Add a new Student
+                            
                             List<Course> studentCourses = new List<Course>();
                             Console.WriteLine("Please enter the student's name:");
                             string name = Console.ReadLine();
@@ -218,7 +218,7 @@
                         }
                     case 2:
                         {
-                            // View all Students
+                            
                             if (school.Students.Count == 0)
                             {
                                 Console.WriteLine("No students found.");
@@ -232,7 +232,7 @@
                         }
                     case 3:
                         {
-                            // Search for a Student by ID
+                           
                             Console.WriteLine("Please enter the student's ID:");
                             int searchId = Convert.ToInt32(Console.ReadLine());
                             Student found = school.FindStudent(searchId);
@@ -249,7 +249,7 @@
                         }
                     case 4:
                         {
-                            // Update Student Information
+                            
                             Console.WriteLine("Enter the Student ID:");
                             int idStudent = Convert.ToInt32(Console.ReadLine());
                             Student toUpdate = school.FindStudent(idStudent);
@@ -270,7 +270,7 @@
                         }
                     case 5:
                         {
-                            // Delete a Student
+                            
                             Console.WriteLine("Enter the Student ID to delete:");
                             int deleteId = Convert.ToInt32(Console.ReadLine());
                             if (school.DeleteStudent(deleteId))
@@ -286,7 +286,7 @@
                         }
                     case 6:
                         {
-                            // Add a new Course
+                            
                             Console.WriteLine("Enter the Course ID:");
                             int courseId = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Enter the Course Title:");
@@ -316,7 +316,7 @@
                         }
                     case 7:
                         {
-                            // Add a new Instructor
+                            
                             Console.WriteLine("Enter the Instructor ID:");
                             int instructorId = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Enter the Instructor Name:");
@@ -338,7 +338,7 @@
                         }
                     case 8:
                         {
-                            // Enroll a Student in a Course
+                           
                             Console.WriteLine("Enter the Student ID:");
                             int enrollStudentId = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine("Enter the Course ID:");
@@ -365,7 +365,7 @@
                         }
                     case 9:
                         {
-                            // View all Courses
+                            
                             if (school.Courses.Count == 0)
                             {
                                 Console.WriteLine("No courses found.");
@@ -380,7 +380,7 @@
                         }
                     case 10:
                         {
-                            // View all Instructors
+                            
                             if (school.Instructors.Count == 0)
                             {
                                 Console.WriteLine("No instructors found.");
